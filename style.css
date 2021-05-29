@@ -1,0 +1,125 @@
+.list-notify-item.hide {
+    display: none !important;
+   /* -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;*/
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
+
+#list-notify-list .list-notify-item {
+    border-bottom: solid 1px #CCC;
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    width: 95%;
+}
+
+.list-notify-item:hover {
+    background-color: whitesmoke;
+    cursor:pointer;
+}
+
+.list-notify-item p.ln-desc {
+    color: gray;
+    font-size: 13px;
+}
+
+.ln-extras div {
+    /* border: solid 1px #CCC; */
+    width: auto;
+    float: left;
+    font-size: 11px;
+    margin: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 2px #CCC;
+}
+
+.ln-extras {
+    float: left;
+    display: inline-block;
+    width: 100%;
+}
+
+.ln-extras div a {
+    text-decoration: none;
+    color: black;
+    /* cursor: pointer; */
+}
+
+
+#list-notify-list {
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width:300px;
+    border-radius: 10px;
+    border: solid 1px #CCC;
+    box-shadow: 1px 2px 2px #ccc;
+    display: none;
+  }
+
+  #list-notify-list.open {
+      display: block !important;
+  }
+  
+  #list-notify-list::-webkit-scrollbar {
+      width: 5px;
+  }
+  
+  #list-notify-list::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgb(255 255 255 / 30%); 
+      border-radius: 10px;
+  }
+  
+  #list-notify-list::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      
+      /*-webkit-box-shadow: inset 0 0 6px rgb(156 156 156 / 50%); */
+      background-color:#d6d6d6;
+  }
+
+  .notification {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+  
+.notification .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: #2cb6c5;
+    color: white;
+}
+
+.list-notify-item.active {
+    background-color: #e7f2ff;
+    border-left: solid 5px blue;
+}
+a .ln-title {
+    color: black;
+}
+
+span.badge.hide {
+    display: none;
+}
+
+div#list-notification {
+    margin: 15px 10px;
+    display: inline-block;
+}
