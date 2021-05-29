@@ -18,7 +18,7 @@ listNotify.addNotification(
     {
 	title: 'Light Weighted Library',
 	description: 'You can easily customize the things according to your need, a very simple JS file and css file which you can customize in your own way',
-		    openNotification: true,
+    	openNotification: true,
 	url: 'https://github.com/MuhammadRehman/List-Notification',
 	urlTarget: '_blank'
     }
