@@ -173,39 +173,3 @@ var listNotify = new notifyList();
 listNotify.ready();
 
 document.getElementById("list-notify-icon").onclick = listNotify.openNotitication;
-
-listNotify.addNotification( 
-    {
-        title: 'Easy Notification',
-        description: 'The simple and easy to use JS library to manage notifications on your site',
-        openNotification: true,
-        showBell: true,
-    }
-);
-
-listNotify.addNotification( 
-    {
-        title: 'Developer Friendly',
-        description: 'The simple JS library is developer friendly',
-        openNotification: true,
-        showBell: true,
-    }
-);
-
-listNotify.addNotification( 
-    {
-        title: 'Easily Customizable',
-        description: 'You can easily customize the things according to your need, a very simple JS file and css file which you can customize in your own way',
-        openNotification: true,
-        showBell: true,
-    }
-);
-
-listNotify.addNotification( 
-    {
-        title: 'Light Weighted Library',
-        description: 'You can easily customize the things according to your need, a very simple JS file and css file which you can customize in your own way',
-        openNotification: true,
-        showBell: true,
-    }
-);
