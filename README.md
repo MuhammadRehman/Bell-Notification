@@ -1,5 +1,6 @@
 # List Notification
 [LIVE DEMO](https://muhammadrehman.com/list-notification-js-library/)
+
 ListNotification is a light weighted JS library that can be easily embedded in any web applications. It's easy-to-use and developer friendly. The procedure of using this library is quite simple. There is one JS file that is responsible for making notifications on your screen. 
 
 Below is the guide how to use this library.
