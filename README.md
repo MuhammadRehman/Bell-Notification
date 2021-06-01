@@ -21,7 +21,7 @@ For adding a new notification in notification window you can use the following c
 listNotify.addNotification( 
     {
 	title: 'Awesome Library',
-	description: 'This is an awesome and easy to use library',
+	description: 'A simple and easy to use library to display notifications',
     	openNotification: true,
 	url: 'https://github.com/MuhammadRehman/List-Notification',
 	urlTarget: '_blank'
