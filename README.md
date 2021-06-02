@@ -20,12 +20,12 @@ For adding a new notification in notification window you can use the following c
 ```js
 listNotify.addNotification( 
     {
-		title: 'Awesome Library',
-		description: 'A simple and easy to use library to display notifications',
-		openNotification: true,
-		url: 'https://github.com/MuhammadRehman/List-Notification',
-		urlTarget: '_blank',
-		highlight: true
+	title: 'Awesome Library',
+	description: 'A simple and easy to use library to display notifications',
+	openNotification: true,
+	url: 'https://github.com/MuhammadRehman/List-Notification',
+	urlTarget: '_blank',
+	highlight: true
     }
 );
 ```
