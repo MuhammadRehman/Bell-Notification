@@ -20,11 +20,12 @@ For adding a new notification in notification window you can use the following c
 ```js
 listNotify.addNotification( 
     {
-	title: 'Awesome Library',
-	description: 'A simple and easy to use library to display notifications',
-    	openNotification: true,
-	url: 'https://github.com/MuhammadRehman/List-Notification',
-	urlTarget: '_blank'
+		title: 'Awesome Library',
+		description: 'A simple and easy to use library to display notifications',
+		openNotification: true,
+		url: 'https://github.com/MuhammadRehman/List-Notification',
+		urlTarget: '_blank',
+		highlight: true
     }
 );
 ```
@@ -36,11 +37,25 @@ Title of the notification
 **description**
 A short description about the notification
 
-**openNotification**
-Open the notification window when a new notification added
-
 **url**
 Notification URL where you would like to redirect the user when they click on it.
 
 **urlTarget**
 Open a link in new or existing window
+
+**openNotification**
+Open the notification window when a new notification added
+
+**highlight**
+If set to "true" the notification will show the bell icon with highlighting effect.
+
+## Changelog
+
+### v1.0 ( 29-05-2021 )
+
+* Initial Version
+
+### v1.0.1 ( 03-06-2021 )
+
+* New - Added new attribute "highlight"
+* Tweaks - CSS Improvements

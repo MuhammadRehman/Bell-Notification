@@ -1,6 +1,6 @@
 let notifyOpen = 0; // Check notification list is open or not
 let newNotifications = 0; // Counter new notifications
-let maxNotificationLength = 10;
+let maxNotificationLength = 10; // Maximum notifications in a window
 
 notifyList = function( defaultValues ) {
 
@@ -9,23 +9,24 @@ notifyList = function( defaultValues ) {
         description: '',
         openNotification: false,
         url: 'javascript:void(0)',
-        urlTarget: '_self'
+        urlTarget: '_self',
+        highlight: true
     };
 
     // Overwriting default values
-  	for( var key in defaultValues ){
-    	this.default[key] = defaultValues[key];
-  	}
-    
-    window.addEventListener('click', function(e){   
+    for( var key in defaultValues ){
+        this.default[key] = defaultValues[key];
+    }
+
+    window.addEventListener('click', function(e){
         if (!document.getElementById('list-notification').contains(e.target)){
-            hideNotification();
+            hideNotification();            
         }
     });
 
     // Open/Close Notification window
     function showNotifications() {     
-           
+            
         if( notifyOpen == 0 ) {
             showNotification();
         } else {
@@ -67,13 +68,14 @@ notifyList = function( defaultValues ) {
     // Push notification in a list
     function pushNotificationInList(notification) {
 
-        console.log( notification );
         var element = document.getElementById("list-notify-list");
 
-        var str = '<a href="'+ getValues( notification, 'url' ) +'" target="'+ getValues( notification, 'urlTarget' ) +'"><div class="list-notify-item active '+ ( notifyOpen == 0 ? 'hide' : '' ) +'"><div class="ln-title">'+ getValues( notification, 'title' ) +'</div><p class="ln-desc">'+ getValues( notification, 'description' ) +'</p><div class="ln-extras"></div></div></a>';
+        var str = '<a href="'+ getValues( notification, 'url' ) +'" target="'+ getValues( notification, 'urlTarget' ) +'"><div class="list-notify-item ' + ( getValues( notification, 'highlight' ) == true ? 'active' : '' ) + ' '+ ( notifyOpen == 0 ? 'hide' : '' ) +'"><div class="ln-title">'+ getValues( notification, 'title' ) +'</div><p class="ln-desc">'+ getValues( notification, 'description' ) +'</p><div class="ln-extras"></div></div></a>';
         element.insertAdjacentHTML( 'afterbegin', str );
 
-        addCounter();
+        if( getValues( notification, 'highlight' ) == true ) {
+            addCounter();
+        }
 
         if( notification.openNotification == true ) {
             showNotification();
@@ -91,9 +93,7 @@ notifyList = function( defaultValues ) {
     function addCounter() {
 
         newNotifications += 1; // Increment of new notification
-
         updateCounter();
-        
         showCounter();
     }
 
@@ -113,9 +113,7 @@ notifyList = function( defaultValues ) {
 
     // Display Counter on notification
     function showCounter() {
-
         document.getElementById('list-notify-icon').getElementsByClassName('badge')[0].classList.remove('hide');
-
     }
 
     // Number of new notification
